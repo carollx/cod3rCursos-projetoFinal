@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <a class="toggle" @click="toggleMenu" v-if="!hideToggle">
+        <a :class="toggleMenuClicked" @click="toggleMenu" v-if="!hideToggle">
             <i class="fa fa-lg" :class="icon"></i>
         </a>
         <h1 class="title">
@@ -19,11 +19,14 @@ export default {
     computed: {
         icon() {
             return "fas fa-bars"
+        },
+        toggleMenuClicked(){
+            return this.$store.state.isMenuVisible ? "toggle clicked" : "toggle"
         }
     },
     methods: {
         toggleMenu() {
-            
+            this.$store.commit('toggleMenu')
         }
     }
 }
@@ -65,6 +68,11 @@ export default {
     }
 
     header.header > a.toggle:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(14, 8, 8, 0.2);
+    }
+
+    header.header > a.toggle.clicked {
+        background-color: #0f021b;
+        color: #7a7a7a;
     }
 </style>
