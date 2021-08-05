@@ -8,8 +8,12 @@
             <font-awesome-icon icon="caret-down" />
         </div>
         <div class="user-dropdown-content">
-            <a href><font-awesome-icon icon="user-cog" />Administração</a>
-            <a href><i class="fa fa-sign-out">Sair</i></a>
+            <router-link to="/admin">
+                <font-awesome-icon icon="user-cog" /> Administração
+            </router-link>
+            <router-link to="/logout">
+                <i class="fa fa-sign-out"> Sair</i>
+            </router-link>
         </div>
     </div>
 </template>

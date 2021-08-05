@@ -6,6 +6,7 @@ import App from './App'
 
 import './config/bootstrap'
 import store from './config/store'
+import router from './config/router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCaretDown, faUserCog } from '@fortawesome/free-solid-svg-icons'
@@ -19,5 +20,6 @@ Vue.config.productionTip = false
 
 new Vue({
   store,
+  router,
   render: h => h(App)
 }).$mount('#app')
