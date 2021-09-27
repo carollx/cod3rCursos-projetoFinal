@@ -8,7 +8,7 @@
             <font-awesome-icon icon="caret-down" />
         </div>
         <div class="user-dropdown-content">
-            <router-link to="/admin">
+            <router-link to="/admin" v-if="user.admin">
                 <font-awesome-icon icon="user-cog" /> Administração
             </router-link>
             <a href @click.prevent="logout">

@@ -50,5 +50,5 @@ module.exports = app => {
         res.send(false)
     }
 
-    return { signin, validateToken}
+    return { signin, validateToken }
 }
